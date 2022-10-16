@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+}
+
+.wrap{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.InputField{
+    width: 250px;
+    height: 40px;
+    border: solid 1px black;
+    font-size: 16px;
+}
+
+.addBtn{
+    width: 56px;
+    height: 40px;
+    border: solid 1px skyblue;
+    background-color: skyblue;
+}
+
+.contentWrap{
+    margin-top: 8px;
+}
+
+.content{
+    margin-top: 8px;
+    display: flex;
+}
+
+.todo{
+    width: 250px;
+    height: 40px;
+    border: solid 1px black;
+    padding: 8px 0px;
+}
+
+.remove{
+    width: 56px;
+    height: 40px;
+    background-color: skyblue;
+    margin-left: 4px;
+}
+
+
