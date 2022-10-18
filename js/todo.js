@@ -7,22 +7,39 @@ console.log(addBtn);
 const contentWrap = document.querySelector(".contentWrap")
 console.log(contentWrap);
 
+
 addBtn.addEventListener("click",()=>{
     console.log(inputField.value);
     contentWrap.innerHTML += `
     <div class="content">
-        <div class="todo">${inputField.value}</div>
-        <button type="button" class="remove">削除</button>
-    </div>
-    `
+    <input type="checkbox" class="checkBox">
+    <p class="task">${inputField.value}</p>
+    <button type="button" class="remove">削除</button>
+    <button type="button" class="changeTaskBtn">編集</button>
+</div>
+`
     const removeBtn = document.querySelectorAll(".remove")
-    console.log(removeBtn);
     const content = document.querySelectorAll(".content")
-    console.log(content);
-    content.forEach((i,e)=>{
-        removeBtn.forEach((index,element)=>{
-            
-        })
+    const checkBox = document.querySelector(".checkBox")
+    const task = document.querySelector(".task")
+    checkBox.addEventListener("click",()=>{
+        if(checkBox.checked){
+            removeBtn.forEach((e,i)=>{
+                content.forEach((ele,index)=>{
+                    e.addEventListener("click",()=>{
+                        if(i == index){
+                            ele.remove();
+                        }
+                    })
+                })
+            })
+
+        task.innerHTML = `<strike>${inputField.value}</strike>`
+        }else{
+            console.log("no");
+        }
     })
+    console.log(checkBox);
+
 })
 
