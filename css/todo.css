@@ -54,4 +54,42 @@ h1{
     margin-left: 4px;
 }
 
+.popUpFullScreenWrap{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(93, 93, 93, 1);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: none;
+}
+
+.popUpWrap{
+    width: 700px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 160px 80px;
+}
+
+.changeTaskInput{
+    width: 450px;
+    height: 48px;
+    border: solid 1px black;
+}
+
+.changeTaskDecisionBtn{
+    width: 56px;
+    height: 48px;
+    background-color: skyblue;
+    margin-left: 4px;
+
+}
+
 

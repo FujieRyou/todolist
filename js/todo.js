@@ -7,6 +7,9 @@ console.log(addBtn);
 const contentWrap = document.querySelector(".contentWrap")
 console.log(contentWrap);
 
+const popUpFullScreenWrap = document.querySelector(".popUpFullScreenWrap")
+const changeTaskDecisionBtn = document.querySelector(".changeTaskDecisionBtn")
+
 
 addBtn.addEventListener("click",()=>{
     console.log(inputField.value);
@@ -20,26 +23,36 @@ addBtn.addEventListener("click",()=>{
 `
     const removeBtn = document.querySelectorAll(".remove")
     const content = document.querySelectorAll(".content")
-    const checkBox = document.querySelector(".checkBox")
-    const task = document.querySelector(".task")
-    checkBox.addEventListener("click",()=>{
-        if(checkBox.checked){
-            removeBtn.forEach((e,i)=>{
-                content.forEach((ele,index)=>{
-                    e.addEventListener("click",()=>{
-                        if(i == index){
-                            ele.remove();
-                        }
+    const checkBox = document.querySelectorAll(".checkBox")
+    // const task = document.querySelectorAll(".task")
+    const changeTaskBtn = document.querySelectorAll(".changeTaskBtn")
+
+    checkBox.forEach((i,e)=>{
+        i.addEventListener("click",()=>{
+            if(i.checked){
+                removeBtn.forEach((e,i)=>{
+                    content.forEach((ele,index)=>{
+                        e.addEventListener("click",()=>{
+                            if(i == index){
+                                ele.remove();
+                            }
+                        })
                     })
                 })
-            })
-
-        task.innerHTML = `<strike>${inputField.value}</strike>`
-        }else{
-            console.log("no");
-        }
+            }else{
+                console.log("no");
+            }
+        })
     })
-    console.log(checkBox);
 
+    changeTaskBtn.forEach((e,i)=>{
+        e.addEventListener("click",()=>{
+            popUpFullScreenWrap.style.display = "block";
+        })
+    })
+    
+    changeTaskDecisionBtn.addEventListener("click",()=>{
+        popUpFullScreenWrap.style.display = "none";
+    })
 })
 
